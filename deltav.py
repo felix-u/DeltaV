@@ -29,9 +29,19 @@ Phobos = """Figures assume elliptical Mars orbit (minimum-energy capture).
 740m/s transfer. 550m/s capture into low orbit.
 6m/s to land."""
 
+Vesta = """4520m/s.
+4110m/s capture + 100m/s for low orbit.
+160m/s to land."""
+Ceres = """4900m/s.
+4390m/s capture + 150m/s for low orbit.
+270m/s to land."""
+
 Jupiter = """6300m/s.
 270m/s capture + 17480m/s for low orbit.
 Non-propulsive descent."""
+Himalia = """Figures assume elliptical Jupiter orbit (minimum-energy capture).
+190m/s transfer. 2870m/s capture + 20m/s for low orbit.
+40m/s to land."""
 Callisto = """Figures assume elliptical Jupiter orbit (minimum-energy capture).
 1120m/s transfer. 4100m/s capture + 700m/s for low orbit.
 1750m/s to land."""
@@ -44,6 +54,9 @@ Europa = """Figures assume elliptical Jupiter orbit (minimum-energy capture).
 Io = """Figures assume elliptical Jupiter orbit (minimum-energy capture).
 4540m/s transfer. 5790m/s capture + 730m/s for low orbit.
 1780m/s to land."""
+Amalthea = """Figures assume elliptical Jupiter orbit (minimum-energy capture).
+9190m/s transfer. 6310m/s capture + 10m/s for low orbit.
+20m/s to land."""
 
 Saturn = """7290m/s.
 420m/s capture + 10220m/s for low orbit.
@@ -60,6 +73,9 @@ Rhea = """Figures assume elliptical Saturn orbit (minimum-energy capture).
 Dione = """Figures assume elliptical Saturn orbit (minimum-energy capture).
 2570m/s transfer. 4230m/s capture + 140m/s for low orbit.
 360m/s to land."""
+Tethys = """Figures assume elliptical Saturn orbit (minimum-energy capture).
+3190m/s transfer. 4290m/s capture + 110m/s for low orbit.
+270m/s to land."""
 Enceladus = """Figures assume elliptical Saturn orbit (minimum-energy capture).
 3830m/s transfer. 4270m/s capture + 70m/s for low orbit.
 160m/s to land."""
@@ -71,9 +87,18 @@ Mimas = """Figures assume elliptical Saturn orbit (minimum-energy capture).
 Uranus = """7980m/s.
 510m/s capture + 6130m/s for low orbit.
 Non-propulsive descent."""
+Oberon = """Figures assume elliptical Uranus orbit (minimum-energy capture).
+460m/s transfer. 1630m/s capture + 210m/s for low orbit.
+530m/s to land."""
+Titania = """Figures assume elliptical Uranus orbit (minimum-energy capture).
+610m/s transfer. 1780m/s capture + 220m/s for low orbit.
+560m/s to land."""
 Umbriel = """Figures assume elliptical Uranus orbit (minimum-energy transfer).
 970m/s transfer. 2240m/s capture + 150m/s for low orbit.
 370m/s to land."""
+Ariel = """Figures assume elliptical Uranus orbit (minimum-energy capture).
+1320m/s transfer. 2310m/s capture + 160m/s for low orbit.
+390m/s to land."""
 Miranda = """Figures assume elliptical Uranus orbit (minimum-energy transfer).
 1870m/s transfer. 2610m/s capture + 50m/s for low orbit.
 130m/s to land."""
@@ -91,15 +116,12 @@ Proteus = """Figures assume elliptical Neptune orbit (minimum-energy transfer).
 2170m/s transfer. 2900m/s capture + 50m/s for low orbit.
 110m/s to land."""
 
-
-
 Pluto = """8360m/s.
 2700m/s capture + 350m/s for low orbit.
 890m/s to land."""
 Charon = """Figures assume elliptical Pluto orbit (minimum-energy capture).
 40m/s transfer. 20m/s capture + 160m/s for low orbit.
 420m/s to land."""
-
 
 
 sg.theme("DarkBlue")
@@ -112,11 +134,11 @@ layout = [[sg.T("INNER PLANETS:")],
           [sg.B("Mars"), sg.B("Deimos"), sg.B("Phobos")],
           [sg.T("OUTER PLANETS:")],
           [sg.T("Jovian system")],
-          [sg.B("Jupiter"), sg.B("Callisto"), sg.B("Ganymede"), sg.B("Europa"), sg.B("Io")],
+          [sg.B("Jupiter"), sg.B("Himalia"), sg.B("Callisto"), sg.B("Ganymede"), sg.B("Europa"), sg.B("Io"), sg.B("Amalthea")],
           [sg.T("Saturnian system")],
-          [sg.B("Saturn"), sg.B("Iapetus"), sg.B("Titan"), sg.B("Rhea"), sg.B("Dione"), sg.B("Enceladus"), sg.B("Mimas")],
+          [sg.B("Saturn"), sg.B("Iapetus"), sg.B("Titan"), sg.B("Rhea"), sg.B("Dione"), sg.B("Tethys"), sg.B("Enceladus"), sg.B("Mimas")],
           [sg.T("Uranian System")],
-          [sg.B("Uranus"), sg.B("Umbriel"), sg.B("Miranda")],
+          [sg.B("Uranus"), sg.B("Oberon"), sg.B("Titania"), sg.B("Umbriel"), sg.B("Ariel"), sg.B("Miranda")],
           [sg.T("Neptunian system")],
           [sg.B("Neptune"), sg.B("Nereid"), sg.B("Triton"), sg.B("Proteus")],
           [sg.T("Plutonian system")],
@@ -124,7 +146,7 @@ layout = [[sg.T("INNER PLANETS:")],
           [sg.T("")],
           [sg.Output(key='-OUT-', size=(200,5))]]
 
-window = sg.Window("", layout, alpha_channel=0.95, grab_anywhere=True, size=(420, 630), icon="titleIconBLUE.ico")
+window = sg.Window("", layout, alpha_channel=0.95, size=(500, 630), icon="titleIconBLUE.ico")
 
 while True:
     event, values = window.read()
@@ -160,6 +182,9 @@ while True:
     if event == "Jupiter":
         clear()
         print(Jupiter)
+    if event == "Himalia":
+        clear()
+        print(Himalia)
     if event == "Callisto":
         clear()
         print(Callisto)
@@ -172,6 +197,9 @@ while True:
     if event == "Io":
         clear()
         print(Io)
+    if event == "Amalthea":
+        clear()
+        print(Amalthea)
 
     if event == "Saturn":
         clear()
@@ -188,6 +216,9 @@ while True:
     if event == "Dione":
         clear()
         print(Dione)
+    if event == "Tethys":
+        clear()
+        print(Tethys)
     if event == "Enceladus":
         clear()
         print(Enceladus)
@@ -198,9 +229,18 @@ while True:
     if event == "Uranus":
         clear()
         print(Uranus)
+    if event == "Oberon":
+        clear()
+        print(Oberon)
+    if event == "Titania":
+        clear()
+        print(Titania)
     if event == "Umbriel":
         clear()
         print(Umbriel)
+    if event == "Ariel":
+        clear()
+        print(Ariel)
     if event == "Miranda":
         clear()
         print(Miranda)

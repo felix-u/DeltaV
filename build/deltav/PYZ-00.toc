@@ -1,4 +1,4 @@
-('C:\\Users\\felix\\Desktop\\Projects\\DeltaV\\build\\deltav\\PYZ-00.pyz',
+('C:\\Users\\felix\\Desktop\\Builds\\DeltaV\\DeltaV\\build\\deltav\\PYZ-00.pyz',
  [('multiprocessing.popen_fork',
    'c:\\program files (x86)\\python38-32\\lib\\multiprocessing\\popen_fork.py',
    'PYMODULE'),
