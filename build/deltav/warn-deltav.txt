@@ -14,7 +14,7 @@ Types if import:
 IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
            yourself tracking down the missing module. Thanks!
 
-missing module named 'multiprocessing.forking' - imported by C:\Program Files (x86)\Python38-32\Lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py (optional)
+missing module named 'multiprocessing.forking' - imported by C:\Python383\Lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py (optional)
 missing module named 'org.python' - imported by copy (optional), xml.sax (delayed, conditional)
 missing module named _frozen_importlib_external - imported by importlib._bootstrap (delayed), importlib (optional), importlib.abc (optional), zipimport (top-level)
 excluded module named _frozen_importlib - imported by importlib (optional), importlib.abc (optional), zipimport (top-level)
@@ -36,12 +36,8 @@ missing module named multiprocessing.get_context - imported by multiprocessing (
 missing module named multiprocessing.TimeoutError - imported by multiprocessing (top-level), multiprocessing.pool (top-level)
 missing module named multiprocessing.BufferTooShort - imported by multiprocessing (top-level), multiprocessing.connection (top-level)
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing (top-level), multiprocessing.connection (top-level)
+missing module named win32evtlog - imported by logging.handlers (delayed, optional)
+missing module named win32evtlogutil - imported by logging.handlers (delayed, optional)
 missing module named _posixsubprocess - imported by subprocess (optional), multiprocessing.util (delayed)
 missing module named multiprocessing.set_start_method - imported by multiprocessing (top-level), multiprocessing.spawn (top-level)
 missing module named multiprocessing.get_start_method - imported by multiprocessing (top-level), multiprocessing.spawn (top-level)
-missing module named ScrolledText - imported by PySimpleGUI.PySimpleGUI (conditional)
-missing module named tkFont - imported by PySimpleGUI.PySimpleGUI (conditional)
-missing module named tkColorChooser - imported by PySimpleGUI.PySimpleGUI (conditional)
-missing module named ttk - imported by PySimpleGUI.PySimpleGUI (conditional)
-missing module named tkFileDialog - imported by PySimpleGUI.PySimpleGUI (conditional)
-missing module named Tkinter - imported by PySimpleGUI.PySimpleGUI (conditional)

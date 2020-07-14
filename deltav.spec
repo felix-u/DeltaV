@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['deltav.py'],
-             pathex=['C:\\Users\\felix\\Desktop\\Builds\\DeltaV\\DeltaV'],
+             pathex=['C:\\Python383\\Projects\\DeltaV'],
              binaries=[],
              datas=[],
              hiddenimports=[],
